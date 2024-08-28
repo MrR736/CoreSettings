@@ -1,5 +1,5 @@
 @echo off
-set VERSION-CSe=0.0.0.0.1
+set VERSION-CSe=0.0.0.0.2
 
 echo CoreSettings
 echo Version %VERSION-CSe%
