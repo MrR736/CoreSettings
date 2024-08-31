@@ -2,6 +2,8 @@
 
 cd %core%\CoreSettings
 mkdir SuperGodMode
+cd %Core%\CoreSettings\SuperGodMode
+wget https://raw.githubusercontent.com/ThioJoe/Windows-Super-God-Mode/main/Super_God_Mode.ps1
 setlocal
 
 Call :UnZipFile "%Core%\CoreSettings\SuperGodMode" "%Core%\CoreSettings\SuperGodMode.zip"
