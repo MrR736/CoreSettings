@@ -1,3 +1,4 @@
 @echo off
-del /s /q "%Core%\sgm.bat"
-rd /s /q "%Core%\CoreSettings\SuperGodMode"
+cd /d %~dp0
+del /q "%ProgramData%\PhoenixOS\Core\sgm.bat"
+rd /s /q "%cd%\SuperGodMode"

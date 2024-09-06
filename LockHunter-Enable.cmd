@@ -1,2 +1,2 @@
 @echo off
-start call "%core%\CoreControls\LockHunter\install.bat"
+start call "%ProgramData%\PhoenixOS\Core\CoreControls\LockHunter\install.bat"
