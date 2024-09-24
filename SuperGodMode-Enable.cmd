@@ -1,5 +1,6 @@
 @echo off
-title Network Checker
+cd /d %~dp0
+title Download Super God Mode
 
 REM Server to be pinged
 SET server=github.com
@@ -31,10 +32,12 @@ GOTO failed
 REM Internet connection succeeded
 :successful
 color 0A
-cd /d %~dp0
-7za.exe x %cd%\SuperGodMode.7z -o"%cd%\SuperGodMode"
-wget -O "%cd%\SuperGodMode\Super_God_Mode.ps1" https://raw.githubusercontent.com/ThioJoe/Windows-Super-God-Mode/main/Super_God_Mode.ps1
-move "%cd%\SuperGodMode\sgm.bat" "%ProgramData%\PhoenixOS\Core"
+set /p CP=<CorePath
+del /q "%cp%\sgm.bat"
+rd /s /q ".\SuperGodMode"
+.\7z.exe x SuperGodMode.7z -o".\SuperGodMode"
+.\wget -O ".\SuperGodMode\Super_God_Mode.ps1" https://raw.githubusercontent.com/ThioJoe/Windows-Super-God-Mode/main/Super_God_Mode.ps1
+move "%cd%\SuperGodMode\sgm.bat" "%cp%"
 exit
 
 REM Internet connection failed

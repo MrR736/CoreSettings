@@ -1,4 +1,5 @@
 @echo off
 cd /d %~dp0
-del /q "%ProgramData%\PhoenixOS\Core\sgm.bat"
-rd /s /q "%cd%\SuperGodMode"
+set /p CP=<CorePath
+del /q "%cp%\sgm.bat"
+rd /s /q ".\SuperGodMode"
